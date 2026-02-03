@@ -81,7 +81,7 @@ section {
 
 .main h3 {
     color: #cbd5e1;
-    font-size: 2em;
+    font-size: 1.8em;
     font-weight: 700;
     letter-spacing: 1px;
     margin-top: 10px;
@@ -116,6 +116,9 @@ section {
 
 .social-icon a:hover {
     color: #38bdf8;
+}
+.services{
+    background-color: #57595B;
 }
 
 /* --- Cards --- */
@@ -278,7 +281,9 @@ section {
 }
 
 /* --- Contact --- */
-
+.contact{
+    background-color: #57595B;
+}
 .contact .icon{
     font-size: 4.5em;
     color: #38bdf8;

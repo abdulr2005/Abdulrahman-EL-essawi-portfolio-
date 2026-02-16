@@ -8,6 +8,10 @@
     scroll-behavior: smooth;
 }
 
+section {
+    /* تقليل المسافات العمودية بين السكاشن */
+    padding: 50px clamp(10px, 4vw, 120px); 
+}
 /* --- Header --- */
 
 header {
@@ -75,7 +79,7 @@ section {
     display: inline-block;
     margin-top: 10px;
     color: #38bdf8;
-    font-size: 2.8em;
+    font-size: 2.5em;
     font-weight: 600;
 }
 
@@ -183,108 +187,99 @@ section {
 
 /* --- Projects Slider Layout --- */
 
+/* --- سكشن المشاريع: عزل تام ولقطة 3 كروت --- */
 .projects {
     background-color: #020617;
-    overflow: hidden; /* لمنع ظهور الصفحات خارج الإطار */
+    /* الحشو ده بيصغر السكشن كأنه معمول له زوم */
+    padding: 40px clamp(15px, 5vw, 120px); 
 }
 
-/* الحاوية الخارجية (النافذة) */
+/* 1. الحاوية الأساسية (النافذة): هي اللي بتقص أي حاجة بره الـ 3 كروت */
 .projects-slider-container {
     width: 100%;
+    max-width: 1080px; /* عرض مثالي لـ 3 كروت جنب بعض */
+    margin: 0 auto;
     position: relative;
-    margin-top: 30px;
+    overflow: hidden; /* 👈 السطر ده هو اللي بيمنع ظهور المشاريع اللي بعدها */
 }
 
-/* المسار الذي يحتوي على كل الصفحات */
+/* 2. المسار: لازم يكون Flex عشان الصفحات تقف جنب بعض */
 .projects-track {
     display: flex;
-    transition: transform 0.6s cubic-bezier(0.7, 0, 0.3, 1); /* حركة انسيابية للتقليب */
+    transition: transform 0.6s cubic-bezier(0.7, 0, 0.3, 1);
     width: 100%;
 }
 
-/* الصفحة الواحدة (تأخذ عرض الشاشة بالكامل) */
+/* 3. الصفحة الواحدة: لازم تكون 100% من عرض الحاوية بالظبط */
 .project-page {
-    flex: 0 0 100%; /* تضمن أن كل صفحة تأخذ 100% من العرض */
-    padding: 0 10px;
+    flex: 0 0 100%; /* تضمن إن الصفحة الواحدة واخدة العرض كامل وما يتسربش منها حاجة */
+    min-width: 100%;
+    padding: 0 5px;
+    box-sizing: border-box;
 }
 
-.chapter-title {
-    color: #f8fafc;
-    text-align: center;
-    margin-bottom: 30px;
-    font-size: 1.5em;
-    font-weight: 600;
-    opacity: 0.8;
-}
-
-/* ترتيب المشاريع داخل الصفحة (3 في كل صفحة) */
+/* 4. الشبكة: بتوزع الـ 3 مشاريع بالتساوي داخل الصفحة */
 .projects-grid-wrapper {
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    gap: 20px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3 أعمدة إجبارية */
+    gap: 15px;
+    justify-items: center;
 }
 
-/* --- Project Card (ابقاء الـ 3D Flip) --- */
-
+/* 5. الكارت (مقاس مصغر للفخامة) */
 .project-card {
-    background-color: transparent;
-    width: min(100%, 21em); /* صغرنا الحجم قليلاً لتناسب 3 مشاريع أفقياً */
-    aspect-ratio: 23 / 26;
+    width: 100%;
+    max-width: 17.5em; /* صغرنا الحجم عشان نلم الزحمة */
+    aspect-ratio: 4 / 5.2;
     perspective: 1000px;
 }
+.chapter-title {
+    color: #38bdf8;
+    text-align: center;
+    margin-bottom: 15px; /* مسافة صغيرة */
+    font-size: 1.1em;
+    font-weight: 600;
+    opacity: 0.9;
+}
 
-/* --- Slider Controls (الأزرار والنقاط) --- */
-
+/* التحكم (الأزرار): قربناها من المشاريع عشان اللقطة تكمل */
 .slider-controls {
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-top: 50px;
-    gap: 30px;
+    margin-top: 25px;
+    gap: 20px;
 }
 
 .nav-btn {
+    width: 38px;
+    height: 38px;
     background: #1e293b;
     border: 1px solid #334155;
     color: #38bdf8;
-    width: 50px;
-    height: 50px;
     border-radius: 50%;
     cursor: pointer;
-    font-size: 1.2em;
-    transition: 0.3s ease;
     display: flex;
     justify-content: center;
     align-items: center;
+    transition: 0.3s;
 }
 
-.nav-btn:hover {
-    background: #38bdf8;
-    color: #020617;
-    transform: scale(1.1);
-}
-
-.page-dots {
-    display: flex;
-    gap: 12px;
-}
+.nav-btn:hover { background: #38bdf8; color: #020617; }
 
 .dot {
-    width: 12px;
-    height: 12px;
+    width: 8px;
+    height: 8px;
     background: #334155;
     border-radius: 50%;
-    cursor: pointer;
     transition: 0.3s;
 }
 
 .dot.active {
     background: #38bdf8;
-    width: 30px; /* شكل بيضاوي للنقطة النشطة */
-    border-radius: 20px;
+    width: 22px;
+    border-radius: 10px;
 }
-
 /* --- Responsive Slider --- */
 
 @media (max-width: 1100px) {

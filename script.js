@@ -1,88 +1,144 @@
-// ==========================================
-// 1. تفعيل أنميشن الظهور (AOS)
-// ==========================================
+// ═══════════════════════════════════════════════
+// 1. AOS — scroll animations
+// ═══════════════════════════════════════════════
 AOS.init({
-    duration: 1000, // مدة حركة الظهور (ثانية واحدة)
-    once: true,     // الأنميشن يحدث مرة واحدة فقط أثناء النزول
-    offset: 100,    // يبدأ الأنميشن قبل الوصول للعنصر بـ 100 بكسل
-    easing: 'ease-in-out', // انسيابية الحركة
+  duration: 900,
+  once: true,
+  offset: 80,
+  easing: 'ease-out-cubic',
 });
 
-// ==========================================
-// 2. تفعيل تأثير الكتابة (Typed.js)
-// ==========================================
-// التأكد من وجود العنصر أولاً لتجنب الأخطاء
+// ═══════════════════════════════════════════════
+// 2. Typed.js — hero typing effect
+// ═══════════════════════════════════════════════
 if (document.getElementById('typing-text')) {
-    new Typed('#typing-text', {
-        strings: [
-            'AI Engineer', 
-            'Data Scientist', 
-            'Machine Learning Expert',
-            'Robotics Engineer'
-        ],
-        typeSpeed: 60,    // سرعة الكتابة
-        backSpeed: 40,    // سرعة المسح
-        backDelay: 2000,  // مدة الانتظار قبل المسح
-        loop: true,       // تكرار للأبد
-        showCursor: true, // إظهار المؤشر |
-        cursorChar: '|'
-    });
+  new Typed('#typing-text', {
+    strings: [
+      'AI Engineer',
+      'Data Scientist',
+      'Machine Learning Expert',
+      'Robotics Engineer',
+    ],
+    typeSpeed: 55,
+    backSpeed: 35,
+    backDelay: 2200,
+    loop: true,
+    showCursor: true,
+    cursorChar: '|',
+  });
 }
 
-// ==========================================
-// 3. منطق السلايدر الأفقي (Project Slider)
-// ==========================================
+// ═══════════════════════════════════════════════
+// 3. Header — scroll shrink
+// ═══════════════════════════════════════════════
+const header = document.getElementById('header');
+window.addEventListener('scroll', () => {
+  if (window.scrollY > 40) {
+    header.style.background = 'rgba(244,243,240,0.97)';
+  } else {
+    header.style.background = 'rgba(244,243,240,0.92)';
+  }
+});
+
+// ═══════════════════════════════════════════════
+// 4. Hamburger — mobile nav
+// ═══════════════════════════════════════════════
+const hamburger = document.getElementById('hamburger');
+const mobileNav = document.getElementById('mobileNav');
+
+hamburger.addEventListener('click', () => {
+  mobileNav.classList.toggle('open');
+});
+
+// close when clicking a mobile link
+document.querySelectorAll('.mob-link').forEach(link => {
+  link.addEventListener('click', () => {
+    mobileNav.classList.remove('open');
+  });
+});
+
+// ═══════════════════════════════════════════════
+// 5. Projects Slider
+// ═══════════════════════════════════════════════
 let currentSlide = 0;
 const track = document.getElementById('projectTrack');
-const dots = document.querySelectorAll('.dot');
+const dots  = document.querySelectorAll('.dot');
+const pages = document.querySelectorAll('.project-page');
 const totalSlides = dots.length;
 
-/**
- * وظيفة تحريك السلايدر عبر الأزرار
- * @param {number} direction - (1) للتالي، (-1) للسابق
- */
 function moveSlide(direction) {
-    currentSlide += direction;
-
-    // الدوران اللانهائي
-    if (currentSlide >= totalSlides) {
-        currentSlide = 0;
-    } else if (currentSlide < 0) {
-        currentSlide = totalSlides - 1;
-    }
-
-    updateSlider();
+  currentSlide += direction;
+  if (currentSlide >= totalSlides) currentSlide = 0;
+  if (currentSlide < 0) currentSlide = totalSlides - 1;
+  updateSlider();
 }
 
-/**
- * تحديث واجهة السلايدر
- */
 function updateSlider() {
-    if (!track) return; // حماية في حال عدم وجود السلايدر في الصفحة
+  if (!track) return;
 
-    // تحريك المسار أفقياً
-    const offset = -currentSlide * 100;
-    track.style.transform = `translateX(${offset}%)`;
+  track.style.transform = `translateX(-${currentSlide * 100}%)`;
 
-    // تحديث حالة النقاط (Dots)
-    dots.forEach((dot, index) => {
-        dot.classList.toggle('active', index === currentSlide);
-    });
+  pages.forEach((page, i) => {
+    page.classList.toggle('active-page', i === currentSlide);
+  });
+
+  dots.forEach((dot, i) => {
+    dot.classList.toggle('active', i === currentSlide);
+  });
 }
 
-// إضافة إمكانية النقر على النقاط مباشرة
-dots.forEach((dot, index) => {
-    dot.addEventListener('click', () => {
-        currentSlide = index;
-        updateSlider();
-    });
+// dot click
+dots.forEach((dot, i) => {
+  dot.addEventListener('click', () => {
+    currentSlide = i;
+    updateSlider();
+  });
 });
 
-// التحريك باستخدام أسهم لوحة المفاتيح
-document.addEventListener('keydown', (e) => {
-    if (e.key === "ArrowRight") {
-        moveSlide(1);
-    } else if (e.key === "ArrowLeft") {
-        moveSlide(-1);
-    }
+// keyboard arrows
+document.addEventListener('keydown', e => {
+  if (e.key === 'ArrowRight') moveSlide(1);
+  if (e.key === 'ArrowLeft')  moveSlide(-1);
 });
+
+// touch/swipe support
+let touchStartX = 0;
+let touchEndX   = 0;
+
+if (track) {
+  track.addEventListener('touchstart', e => {
+    touchStartX = e.changedTouches[0].screenX;
+  }, { passive: true });
+
+  track.addEventListener('touchend', e => {
+    touchEndX = e.changedTouches[0].screenX;
+    const diff = touchStartX - touchEndX;
+    if (Math.abs(diff) > 40) {
+      moveSlide(diff > 0 ? 1 : -1);
+    }
+  }, { passive: true });
+}
+
+// init
+updateSlider();
+
+// ═══════════════════════════════════════════════
+// 6. Active nav link on scroll
+// ═══════════════════════════════════════════════
+const sections  = document.querySelectorAll('section[id]');
+const navLinks  = document.querySelectorAll('.navigation a');
+
+const observer = new IntersectionObserver(entries => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      navLinks.forEach(link => {
+        link.classList.toggle(
+          'active',
+          link.getAttribute('href') === '#' + entry.target.id
+        );
+      });
+    }
+  });
+}, { rootMargin: '-40% 0px -55% 0px' });
+
+sections.forEach(s => observer.observe(s));

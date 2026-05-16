@@ -1,366 +1,520 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
-    <link rel="stylesheet" href="style.css">
-    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-    <link rel="icon" type="image/png" href="img/logo.png">
-    <link rel="shortcut icon" href="logo.png" type="image/x-icon">
-    <title>Abdulrahman EL-essawi</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Abdulrahman El-Essawi — AI Engineer</title>
+  <link rel="icon" type="image/png" href="img/logo.png" />
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;1,9..40,300&display=swap" rel="stylesheet" />
+
+  <!-- Icons & Libs -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-    <header>
-        <a href="#main" class="logo">Abdulrahman</a>
-        <nav class="navigation">
-            <a href="#core-Expertise">Core Expertise</a>
-            <a href="#projects">projects</a>
-            <a href="#services">services</a>
-            <a href="#contact">contact</a>
-        </nav>
-    </header>
 
-    <section class="main" id="main">
-        <div data-aos="fade-right" data-aos-duration="1500">
-            <h2>Hi, I'm Abdulrahman<br>
-                <span id="typing-text"></span>
-            </h2>
-            <h3>Building intelligent machines and data-driven solutions</h3>
-            <a href="#projects" class="main-btu">view my work</a>
-            <div class="social-icon">
-                <a href="https://github.com/abdulr2005"><i class="fa-brands fa-github"></i></a>
-                <a href="https://www.linkedin.com/in/abdulrahmn-essawi-785543358/"><i class="fa-brands fa-linkedin"></i></a>
-                <a href="mailto:abdulessawi@gmail.com"><i class="fa-regular fa-at"></i></a>
-                <a href="https://wa.me/2001147809899"><i class="fa-brands fa-whatsapp"></i></a>
-            </div>
+  <!-- ═══════════════════════════════ HEADER ═══════════════════════════════ -->
+  <header id="header">
+    <a href="#hero" class="logo">Abdulrahman</a>
+    <nav class="navigation">
+      <a href="#expertise">Expertise</a>
+      <a href="#education">Education</a>
+      <a href="#projects">Projects</a>
+      <a href="#contact">Contact</a>
+    </nav>
+    <a href="#contact" class="nav-cta">Let's talk</a>
+    <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+      <span></span><span></span><span></span>
+    </button>
+  </header>
+
+  <!-- Mobile nav -->
+  <div class="mobile-nav" id="mobileNav">
+    <a href="#expertise" class="mob-link">Expertise</a>
+    <a href="#education" class="mob-link">Education</a>
+    <a href="#projects" class="mob-link">Projects</a>
+    <a href="#contact" class="mob-link">Contact</a>
+  </div>
+
+  <!-- ═══════════════════════════════ HERO ═══════════════════════════════ -->
+  <section class="hero" id="hero">
+    <div class="hero-bg-grid"></div>
+
+    <div class="hero-content">
+      <div class="hero-eyebrow" data-aos="fade-right" data-aos-duration="800">
+        <span class="eyebrow-line"></span>
+        <span class="eyebrow-text">AI Engineer · Data Scientist · Robotics</span>
+      </div>
+
+      <h1 class="hero-name" data-aos="fade-up" data-aos-duration="900" data-aos-delay="100">
+        Abdulrahman<br /><em>El-Essawi</em>
+      </h1>
+
+      <div class="hero-role-row" data-aos="fade-up" data-aos-duration="800" data-aos-delay="200">
+        <span id="typing-text"></span>
+      </div>
+
+      <p class="hero-sub" data-aos="fade-up" data-aos-duration="800" data-aos-delay="300">
+        Building intelligent machines and data-driven solutions —<br />
+        on the edge of graduation, armed with real projects<br />that solve real problems.
+      </p>
+
+      <div class="hero-actions" data-aos="fade-up" data-aos-duration="800" data-aos-delay="400">
+        <a href="#projects" class="btn-primary">View my work</a>
+        <a href="#" class="btn-ghost">Download CV <i class="fa-solid fa-arrow-right"></i></a>
+      </div>
+
+      <div class="hero-social" data-aos="fade-up" data-aos-duration="800" data-aos-delay="500">
+        <a href="https://github.com/abdulr2005" target="_blank" aria-label="GitHub"><i class="fa-brands fa-github"></i></a>
+        <a href="https://www.linkedin.com/in/abdulrahmn-essawi-785543358/" target="_blank" aria-label="LinkedIn"><i class="fa-brands fa-linkedin"></i></a>
+        <a href="mailto:abdulessawi@gmail.com" aria-label="Email"><i class="fa-regular fa-envelope"></i></a>
+        <a href="https://wa.me/2001147809899" target="_blank" aria-label="WhatsApp"><i class="fa-brands fa-whatsapp"></i></a>
+      </div>
+    </div>
+
+    <!-- Floating badge -->
+    <div class="hero-badge" data-aos="zoom-in" data-aos-duration="1000" data-aos-delay="600">
+      <div class="badge-ring badge-ring--outer">
+        <div class="badge-ring badge-ring--inner">
+          <div class="badge-core">
+            <span class="badge-num">12+</span>
+            <span class="badge-lbl">Projects</span>
+          </div>
         </div>
-    </section>
+      </div>
+    </div>
 
-    <section class="core-Expertise" id="core-Expertise" data-aos="fade-up">
-        <h2 class="title">Core Expertise</h2>
-        <div class="content">
-            <div class="card" data-aos="fade-up" data-aos-delay="100">
-                <div class="icon"><i class="fa-solid fa-brain"></i></div>
-                <div class="info">
-                    <h3>AI & Predictive Analytics</h3>
-                    <p>Developing intelligent machine learning models to extract patterns and predict outcomes in healthcare, real estate, and sports.</p>
-                </div>
-            </div>
+    <!-- Stats bar -->
+    <div class="hero-stats" data-aos="fade-up" data-aos-duration="900" data-aos-delay="700">
+      <div class="stat-item">
+        <span class="stat-num">12+</span>
+        <span class="stat-lbl">Projects shipped</span>
+      </div>
+      <div class="stat-divider"></div>
+      <div class="stat-item">
+        <span class="stat-num">4</span>
+        <span class="stat-lbl">AI Domains</span>
+      </div>
+      <div class="stat-divider"></div>
+      <div class="stat-item">
+        <span class="stat-num">1</span>
+        <span class="stat-lbl">IEEE Paper</span>
+      </div>
+      <div class="stat-divider"></div>
+      <div class="stat-item">
+        <span class="stat-num">99%</span>
+        <span class="stat-lbl">Best accuracy</span>
+      </div>
+    </div>
+  </section>
 
-            <div class="card" data-aos="fade-up" data-aos-delay="300">
-                <div class="icon"><i class="fa-solid fa-robot"></i></div>
-                <div class="info">
-                    <h3>Robotics & Automation</h3>
-                    <p>Designing and programming autonomous systems and hardware control logic using Arduino and ESP32.</p>
-                </div>
-            </div>
+  <!-- ═══════════════════════════════ EXPERTISE ═══════════════════════════════ -->
+  <section class="expertise" id="expertise">
+    <div class="section-header" data-aos="fade-up">
+      <div class="section-eyebrow">
+        <span class="ey-line"></span>
+        <span class="ey-txt">What I do</span>
+      </div>
+      <h2 class="section-title">Core expertise</h2>
+    </div>
 
-            <div class="card" data-aos="fade-up" data-aos-delay="500">
-                <div class="icon"><i class="fa-solid fa-database"></i></div>
-                <div class="info">
-                    <h3>Data Engineering & Insights</h3>
-                    <p>Processing large-scale datasets to uncover actionable insights through data cleaning and feature engineering.</p>
-                </div>
-            </div>
-        </div> 
-    </section>
+    <div class="expertise-grid">
+      <div class="exp-card" data-aos="fade-up" data-aos-delay="100">
+        <span class="exp-num">01</span>
+        <i class="fa-solid fa-brain exp-icon"></i>
+        <h3 class="exp-title">AI & Predictive Analytics</h3>
+        <p class="exp-desc">Developing intelligent ML models to extract patterns and predict outcomes in healthcare, real estate, and sports using XGBoost & Random Forest.</p>
+      </div>
+      <div class="exp-card" data-aos="fade-up" data-aos-delay="200">
+        <span class="exp-num">02</span>
+        <i class="fa-solid fa-robot exp-icon"></i>
+        <h3 class="exp-title">Robotics & Automation</h3>
+        <p class="exp-desc">Designing and programming autonomous systems and hardware control logic using Arduino and ESP32 for real-world embedded applications.</p>
+      </div>
+      <div class="exp-card" data-aos="fade-up" data-aos-delay="300">
+        <span class="exp-num">03</span>
+        <i class="fa-solid fa-database exp-icon"></i>
+        <h3 class="exp-title">Data Engineering</h3>
+        <p class="exp-desc">Processing large-scale datasets to uncover actionable insights through rigorous data cleaning, transformation, and feature engineering.</p>
+      </div>
+    </div>
+  </section>
 
-    <section class="services" id="services" data-aos="fade-up">
-        <h2 class="title">services</h2>
-        <div class="content">
-            <div class="card" data-aos="zoom-in" data-aos-delay="100">
-                <div class="icon"><i class="fa-solid fa-chart-pie"></i></div>
-                <div class="info">
-                    <h3>Social Media Data Analytics</h3>
-                    <p>Transforming raw data into growth roadmaps by analyzing patterns across social platforms.</p>
-                </div>
-            </div>
+  <!-- ═══════════════════════════════ EDUCATION ═══════════════════════════════ -->
+  <section class="education" id="education">
+    <div class="section-header" data-aos="fade-up">
+      <div class="section-eyebrow">
+        <span class="ey-line"></span>
+        <span class="ey-txt">Background</span>
+      </div>
+      <h2 class="section-title">Education</h2>
+    </div>
 
-            <div class="card" data-aos="zoom-in" data-aos-delay="300">
-                <div class="icon"><i class="fa-solid fa-chart-line"></i></div>
-                <div class="info">
-                    <h3>Interactive Dashboards</h3>
-                    <p>Turning complex data into intuitive, web-based visuals and performance trackers.</p>
-                </div>
-            </div>
+    <div class="edu-timeline">
 
-            <div class="card" data-aos="zoom-in" data-aos-delay="500">
-                <div class="icon"><i class="fa-solid fa-brain"></i></div>
-                <div class="info">
-                    <h3>Predictive AI Modeling</h3>
-                    <p>Forecasting success with advanced models like XGBoost and Random Forest.</p>
-                </div>
-            </div>
-        </div> 
-    </section>
+      <div class="edu-item" data-aos="fade-up" data-aos-delay="100">
+        <div class="edu-year">2021 – 2025</div>
+        <div class="edu-spine">
+          <div class="edu-dot"></div>
+          <div class="edu-vline"></div>
+        </div>
+        <div class="edu-body">
+          <h3 class="edu-degree">B.Sc. in Computer Engineering</h3>
+          <p class="edu-school">Faculty of Engineering — Your University Name</p>
+          <p class="edu-desc">Specialization in AI, machine learning, and embedded systems. Completed multiple real-world projects spanning healthcare, robotics, and advanced data science.</p>
+          <span class="edu-badge">Graduating 2025</span>
+        </div>
+      </div>
 
-    <section class="projects" id="projects" data-aos="fade-up">
-    <h2 class="title">My Project Chapters</h2>
-    
+      <div class="edu-item" data-aos="fade-up" data-aos-delay="200">
+        <div class="edu-year">2024</div>
+        <div class="edu-spine">
+          <div class="edu-dot"></div>
+          <div class="edu-vline"></div>
+        </div>
+        <div class="edu-body">
+          <h3 class="edu-degree">IEEE Research Paper — Accepted</h3>
+          <p class="edu-school">Image Forgery Localization · Deep Learning</p>
+          <p class="edu-desc">Co-authored an accepted IEEE paper on a deep learning pipeline fusing a custom 6-channel U-Net with traditional computer vision for pixel-level tampering detection.</p>
+          <span class="edu-badge">Published</span>
+        </div>
+      </div>
+
+      <div class="edu-item" data-aos="fade-up" data-aos-delay="300">
+        <div class="edu-year">2022 – now</div>
+        <div class="edu-spine">
+          <div class="edu-dot"></div>
+          <div class="edu-vline edu-vline--last"></div>
+        </div>
+        <div class="edu-body">
+          <h3 class="edu-degree">Self-directed Learning</h3>
+          <p class="edu-school">Kaggle · Coursera · DeepLearning.ai</p>
+          <p class="edu-desc">Continuous upskilling in deep learning, neural networks, and data analytics through structured online programs and competitive hands-on challenges.</p>
+          <span class="edu-badge">Ongoing</span>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════ PROJECTS ═══════════════════════════════ -->
+  <section class="projects" id="projects">
+    <div class="section-header" data-aos="fade-up">
+      <div class="section-eyebrow">
+        <span class="ey-line"></span>
+        <span class="ey-txt">My work</span>
+      </div>
+      <h2 class="section-title">Project chapters</h2>
+    </div>
+
     <div class="projects-slider-container">
-        <div class="projects-track" id="projectTrack">
-            
-            <div class="project-page">
-                <h3 class="chapter-title">Chapter 1: Strategy & Healthcare</h3>
-                <div class="projects-grid-wrapper">
-                    <div class="project-card" data-aos="zoom-in">
-                        <div class="project-card-inner">
-                            <div class="project-card-front">
-                                <div class="project-image"><img src="img/tower df pro.png" /></div>
-                                <div class="project-info">
-                                    <strong class="project-title">Tower Defense: Final Battle</strong>
-                                    <p class="project-category">Game Development</p>
-                                </div>
-                            </div>
-                            <div class="project-card-back">
-                                <p>A strategic game featuring wave-based enemy progression and interactive defensive mechanics. Built with Python & Pygame.</p>
-                                <a href="https://github.com/abdulr2005/Tower-Defense-game.git" class="more-details">more details</a>
-                            </div>
-                        </div>
-                    </div>
+      <div class="projects-track" id="projectTrack">
 
-                    <div class="project-card" data-aos="zoom-in" data-aos-delay="200">
-                        <div class="project-card-inner">
-                            <div class="project-card-front">
-                                <div class="project-image"><img src="img/Egypt Real Estate Price Prediction & Analysis.png" /></div>
-                                <div class="project-info">
-                                    <strong class="project-title">Real Estate Prediction</strong>
-                                    <p class="project-category">Data Science & ML</p>
-                                </div>
-                            </div>
-                            <div class="project-card-back">
-                                <p>An end-to-end ML solution estimating property values in the Egyptian market with extensive EDA and visualization.</p>
-                                <a href="https://github.com/abdulr2005/Egypt-Real-Estate-Price-Prediction-Market-Analysis.git" class="more-details">more details</a>
-                            </div>
-                        </div>
-                    </div>
+        <!-- Chapter 1 -->
+        <div class="project-page">
+          <p class="chapter-label">Chapter 1 — Strategy & Healthcare</p>
+          <div class="projects-grid-wrapper">
 
-                    <div class="project-card" data-aos="zoom-in" data-aos-delay="400">
-                        <div class="project-card-inner">
-                            <div class="project-card-front">
-                                <div class="project-image"><img src="img/Diagnostic Breast Cancer Classification.png" /></div>
-                                <div class="project-info">
-                                    <strong class="project-title">Cancer Classification</strong>
-                                    <p class="project-category">Health-Tech / AI</p>
-                                </div>
-                            </div>
-                            <div class="project-card-back">
-                                <p>Diagnostic system utilizing classification algorithms to distinguish between malignant and benign tumors with high precision.</p>
-                                <a href="https://github.com/abdulr2005/Breast-Cancer-Classification-ML.git" class="more-details">more details</a>
-                            </div>
-                        </div>
-                    </div>
+            <div class="project-card" data-aos="fade-up" data-aos-delay="100">
+              <div class="project-card-inner">
+                <div class="project-card-front">
+                  <div class="project-image"><img src="img/tower df pro.png" alt="Tower Defense game" /></div>
+                  <div class="project-info">
+                    <p class="project-category">Game Development</p>
+                    <strong class="project-title">Tower Defense: Final Battle</strong>
+                  </div>
                 </div>
+                <div class="project-card-back">
+                  <h3>Tower Defense</h3>
+                  <p>A strategic game featuring wave-based enemy progression and interactive defensive mechanics. Built with Python & Pygame.</p>
+                  <a href="https://github.com/abdulr2005/Tower-Defense-game.git" class="card-back-btn" target="_blank">View on GitHub <i class="fa-solid fa-arrow-right"></i></a>
+                </div>
+              </div>
             </div>
 
-            <div class="project-page">
-                <h3 class="chapter-title">Chapter 2: Robotics & Wellbeing</h3>
-                <div class="projects-grid-wrapper">
-                    <div class="project-card">
-                        <div class="project-card-inner">
-                            <div class="project-card-front">
-                                <div class="project-image"><img src="img/Football Player Injury Duration Prediction.png" /></div>
-                                <div class="project-info">
-                                    <strong class="project-title">Injury Duration Predictor</strong>
-                                    <p class="project-category">Predictive Analytics</p>
-                                </div>
-                            </div>
-                            <div class="project-card-back">
-                                <p>Analyzes physical metrics and injury history to estimate recovery timelines, helping manage player health effectively.</p>
-                                <a href="https://github.com/abdulr2005/Injury-Regression-Analysis.git" class="more-details">more details</a>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="project-card">
-                        <div class="project-card-inner">
-                            <div class="project-card-front">
-                                <div class="project-image"><img src="img/FIRE FIGHTING ROBOT.png" /></div>
-                                <div class="project-info">
-                                    <strong class="project-title">Fire Fighting Robot</strong>
-                                    <p class="project-category">Robotics & AI</p>
-                                </div>
-                            </div>
-                            <div class="project-card-back">
-                                <p>An autonomous system designed to detect and navigate toward heat sources to extinguish fires in hazardous zones.</p>
-                                <a href="https://github.com/abdulr2005/Autonomous-Fire-Fighting-Robot-Arduino-Based-.git" class="more-details">more details</a>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="project-card">
-                        <div class="project-card-inner">
-                            <div class="project-card-front">
-                                <div class="project-image"><img src="img/Global Mental Health & Lifestyle Analysis.png" /></div>
-                                <div class="project-info">
-                                    <strong class="project-title">Global Mental Health</strong>
-                                    <p class="project-category">Global Data Trends</p>
-                                </div>
-                            </div>
-                            <div class="project-card-back">
-                                <p>Predicts mental health issues using 51 lifestyle features like stress levels and sleep patterns using ML.</p>
-                                <a href="https://github.com/abdulr2005/Global-Mental-Health-Lifestyle-Survey-Dataset.git" class="more-details">more details</a>
-                            </div>
-                        </div>
-                    </div>
+            <div class="project-card" data-aos="fade-up" data-aos-delay="200">
+              <div class="project-card-inner">
+                <div class="project-card-front">
+                  <div class="project-image"><img src="img/Egypt Real Estate Price Prediction & Analysis.png" alt="Real Estate ML" /></div>
+                  <div class="project-info">
+                    <p class="project-category">Data Science & ML</p>
+                    <strong class="project-title">Real Estate Prediction</strong>
+                  </div>
                 </div>
+                <div class="project-card-back">
+                  <h3>Real Estate ML</h3>
+                  <p>End-to-end ML solution estimating property values in the Egyptian market with extensive EDA and visualization.</p>
+                  <a href="https://github.com/abdulr2005/Egypt-Real-Estate-Price-Prediction-Market-Analysis.git" class="card-back-btn" target="_blank">View on GitHub <i class="fa-solid fa-arrow-right"></i></a>
+                </div>
+              </div>
             </div>
 
-            <div class="project-page">
-                <h3 class="chapter-title">Chapter 3: Consumer Intelligence</h3>
-                <div class="projects-grid-wrapper">
-                    <div class="project-card">
-                        <div class="project-card-inner">
-                            <div class="project-card-front">
-                                <div class="project-image"><img src="img/student_lifestyle.png" /></div>
-                                <div class="project-info">
-                                    <strong class="project-title">Student Lifestyle Analytics</strong>
-                                    <p class="project-category">Data Science & ML</p>
-                                </div>
-                            </div>
-                            <div class="project-card-back">
-                                <p>Analyzed 100K records to predict student depression using ML and Power BI for actionable mental health insights.</p>
-                                <a href="https://github.com/abdulr2005/End-to-End-Student-Lifestyle-Analytics.git" class="more-details">more details</a>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="project-card">
-                        <div class="project-card-inner">
-                            <div class="project-card-front">
-                                <div class="project-image"><img src="img/Mall Insight.png" /></div>
-                                <div class="project-info">
-                                    <strong class="project-title">Mall Insight Pro</strong>
-                                    <p class="project-category">Data Science & ML</p>
-                                </div>
-                            </div>
-                            <div class="project-card-back">
-                                <p>Behavioral analysis system utilizing clustering for segmentation and classification models for targeted marketing.</p>
-                                <a href="https://github.com/abdulr2005/Mall-Insight-Pro-Customer-Segmentation-Classification-System.git" class="more-details">more details</a>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="project-card">
-                        <div class="project-card-inner">
-                            <div class="project-card-front">
-                                <div class="project-image"><img src="img/SmartBank.png" /></div>
-                                <div class="project-info">
-                                    <strong class="project-title">SmartBank Intelligence</strong>
-                                    <p class="project-category">Data Science & ML</p>
-                                </div>
-                            </div>
-                            <div class="project-card-back">
-                                <p>Credit card intelligence featuring K-Means and optimized XGBoost with 99% accuracy for persona prediction.</p>
-                                <a href="https://github.com/abdulr2005/SmartBank-Credit-Card-Customer-Intelligence-System.git" class="more-details">more details</a>
-                            </div>
-                        </div>
-                    </div>
+            <div class="project-card" data-aos="fade-up" data-aos-delay="300">
+              <div class="project-card-inner">
+                <div class="project-card-front">
+                  <div class="project-image"><img src="img/Diagnostic Breast Cancer Classification.png" alt="Cancer Classification" /></div>
+                  <div class="project-info">
+                    <p class="project-category">Healthcare AI</p>
+                    <strong class="project-title">Cancer Classification</strong>
+                  </div>
                 </div>
+                <div class="project-card-back">
+                  <h3>Cancer Classifier</h3>
+                  <p>Diagnostic breast cancer classification model using advanced ML pipelines for early detection support.</p>
+                  <a href="#" class="card-back-btn">View on GitHub <i class="fa-solid fa-arrow-right"></i></a>
+                </div>
+              </div>
             </div>
 
-            <div class="project-page">
-                <h3 class="chapter-title">Chapter 4: Social & Forensic AI</h3>
-                <div class="projects-grid-wrapper">
-                    <div class="project-card">
-                        <div class="project-card-inner">
-                            <div class="project-card-front">
-                                <div class="project-image"><img src="img/fb.png" /></div>
-                                <div class="project-info">
-                                    <strong class="project-title">Face Book Predictor</strong>
-                                    <p class="project-category">Data Science & ML</p>
-                                </div>
-                            </div>
-                            <div class="project-card-back">
-                                <p>Analyzes viral factors and post success with 92% accuracy, identifying timing and engagement triggers.</p>
-                                <a href="https://github.com/abdulr2005/FB-Insights-Predictor.git" class="more-details">more details</a>
-                                <a href="https://abdulr2005.github.io/-Face-Book--Engagement-Intelligence/" class="data-report-here">data report</a>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="project-card">
-                        <div class="project-card-inner">
-                            <div class="project-card-front">
-                                <div class="project-image"><img src="img/Baseera.png" /></div>
-                                <div class="project-info">
-                                    <strong class="project-title">Baseera | Public Safety</strong>
-                                    <p class="project-category">Data Science & ML</p>
-                                </div>
-                            </div>
-                            <div class="project-card-back">
-                                <p>Innovative forensic AI analyzing drug-related risks to reduce fatalities through proactive awareness and digital advocacy.</p>
-                                <a href="https://github.com/abdulr2005/-Baseera-A-Vision-to-Save-Lives.git" class="more-details">more details</a>
-                                <a href="https://abdulr2005.github.io/-Baseera-A-Vision-to-Save-Lives/" class="data-report-here">data report</a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="project-card">
-                        <div class="project-card-inner">
-                            <div class="project-card-front">
-                                <div class="project-image"><img src="img/forensics.jpg" /></div>
-                                <div class="project-info">
-                                    <strong class="project-title">Image Forgery Localization</strong>
-                                    <p class="project-category">NN & Deep learning</p>
-                                </div>
-                            </div>
-                            <div class="project-card-back">
-                                <p>Image Forgery Localization An advanced digital forensics AI pipeline fusing a custom 6-channel U-Net with traditional CV for pixel-level tampering detection. Backed by an accepted IEEE.</p>
-                                <a href="https://github.com/Emmy-Elsawy/Image-Forgery-Localization.git" class="more-details">more details</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
+          </div>
         </div>
+
+        <!-- Chapter 2 -->
+        <div class="project-page">
+          <p class="chapter-label">Chapter 2 — Robotics & Wellbeing</p>
+          <div class="projects-grid-wrapper">
+
+            <div class="project-card">
+              <div class="project-card-inner">
+                <div class="project-card-front">
+                  <div class="project-image project-image--placeholder"><img src="img/FIRE FIGHTING ROBOT.png" /></div>
+                  <div class="project-info">
+                    <p class="project-category">Robotics & AI</p>
+                    <strong class="project-title">Fire Fighting Robot</strong>
+                  </div>
+                </div>
+                <div class="project-card-back">
+                  <h3>Fire Fighting Robot</h3>
+                  <p>An autonomous system designed to detect and navigate toward heat sources to extinguish fires in hazardous zones.</p>
+                  <a href="https://github.com/abdulr2005/Breast-Cancer-Classification-ML.git" class="card-back-btn">View on GitHub <i class="fa-solid fa-arrow-right"></i></a>
+                </div>
+              </div>
+            </div>
+
+            <div class="project-card">
+              <div class="project-card-inner">
+                <div class="project-card-front">
+                  <div class="project-image project-image--placeholder"><img src="img/Football Player Injury Duration Prediction.png" /></div>
+                  <div class="project-info">
+                    <p class="project-category">Predictive Analytics</p>
+                    <strong class="project-title">Injury Duration Predictor</strong>
+                  </div>
+                </div>
+                <div class="project-card-back">
+                  <h3>Injury Duration Predictor</h3>
+                  <p>Analyzes physical metrics and injury history to estimate recovery timelines, helping manage player health effectively.</p>
+                  <a href="https://github.com/abdulr2005/Injury-Regression-Analysis.git" class="card-back-btn">View on GitHub <i class="fa-solid fa-arrow-right"></i></a>
+                </div>
+              </div>
+            </div>
+
+
+            <div class="project-card">
+              <div class="project-card-inner">
+                <div class="project-card-front">
+                  <div class="project-image project-image--placeholder"><img src="img/Global Mental Health & Lifestyle Analysis.png" /></div>
+                  <div class="project-info">
+                    <p class="project-category">Global Data Trends</p>
+                    <strong class="project-title">Global Mental Health</strong>
+                  </div>
+                </div>
+                <div class="project-card-back">
+                  <h3>Global Mental Health</h3>
+                  <p>An autonomous system designed to detect and navigate toward heat sources to extinguish fires in hazardous zones.</p>
+                  <a href="https://github.com/abdulr2005/Global-Mental-Health-Lifestyle-Survey-Dataset.git" class="card-back-btn">View on GitHub <i class="fa-solid fa-arrow-right"></i></a>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+        <!-- Chapter 3 -->
+        <div class="project-page">
+          <p class="chapter-label">Chapter 3 — Commerce & Analytics</p>
+          <div class="projects-grid-wrapper">
+
+            <div class="project-card">
+              <div class="project-card-inner">
+                <div class="project-card-front">
+                  <div class="project-image"><img src="img/Mall Insight.png" alt="Mall Insight Pro" /></div>
+                  <div class="project-info">
+                    <p class="project-category">Data Science & ML</p>
+                    <strong class="project-title">Mall Insight Pro</strong>
+                  </div>
+                </div>
+                <div class="project-card-back">
+                  <h3>Mall Insight Pro</h3>
+                  <p>Behavioral analysis system using clustering for segmentation and classification models for targeted marketing.</p>
+                  <a href="https://github.com/abdulr2005/Mall-Insight-Pro-Customer-Segmentation-Classification-System.git" class="card-back-btn" target="_blank">View on GitHub <i class="fa-solid fa-arrow-right"></i></a>
+                </div>
+              </div>
+            </div>
+
+            <div class="project-card">
+              <div class="project-card-inner">
+                <div class="project-card-front">
+                  <div class="project-image"><img src="img/SmartBank.png" alt="SmartBank" /></div>
+                  <div class="project-info">
+                    <p class="project-category">Data Science & ML</p>
+                    <strong class="project-title">SmartBank Intelligence</strong>
+                  </div>
+                </div>
+                <div class="project-card-back">
+                  <h3>SmartBank</h3>
+                  <p>Credit card intelligence featuring K-Means clustering and optimized XGBoost with 99% accuracy for persona prediction.</p>
+                  <a href="https://github.com/abdulr2005/SmartBank-Credit-Card-Customer-Intelligence-System.git" class="card-back-btn" target="_blank">View on GitHub <i class="fa-solid fa-arrow-right"></i></a>
+                </div>
+              </div>
+            </div>
+
+            <div class="project-card">
+              <div class="project-card-inner">
+                <div class="project-card-front">
+                  <div class="project-image"><img src="img/Egypt Real Estate Price Prediction & Analysis.png" alt="Student Lifestyle" /></div>
+                  <div class="project-info">
+                    <p class="project-category">Data Science</p>
+                    <strong class="project-title">Student Lifestyle Analytics</strong>
+                  </div>
+                </div>
+                <div class="project-card-back">
+                  <h3>Student Analytics</h3>
+                  <p>End-to-end student lifestyle analytics revealing behavioral patterns and academic performance indicators.</p>
+                  <a href="https://github.com/abdulr2005/End-to-End-Student-Lifestyle-Analytics.git" class="card-back-btn" target="_blank">View on GitHub <i class="fa-solid fa-arrow-right"></i></a>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+        <!-- Chapter 4 -->
+        <div class="project-page">
+          <p class="chapter-label">Chapter 4 — Social & Forensic AI</p>
+          <div class="projects-grid-wrapper">
+
+            <div class="project-card">
+              <div class="project-card-inner">
+                <div class="project-card-front">
+                  <div class="project-image"><img src="img/fb.png" alt="Facebook Predictor" /></div>
+                  <div class="project-info">
+                    <p class="project-category">Data Science & ML</p>
+                    <strong class="project-title">Facebook Predictor</strong>
+                  </div>
+                </div>
+                <div class="project-card-back">
+                  <h3>FB Insights</h3>
+                  <p>Analyzes viral factors and post success with 92% accuracy, identifying timing and engagement triggers.</p>
+                  <a href="https://github.com/abdulr2005/FB-Insights-Predictor.git" class="card-back-btn" target="_blank">View on GitHub <i class="fa-solid fa-arrow-right"></i></a>
+                </div>
+              </div>
+            </div>
+            <div class="project-card">
+              <div class="project-card-inner">
+                <div class="project-card-front">
+                  <div class="project-image"><img src="img/forensics.jpg" alt="Image Forgery" /></div>
+                  <div class="project-info">
+                    <p class="project-category">NN & Deep Learning</p>
+                    <strong class="project-title">Image Forgery Localization</strong>
+                  </div>
+                </div>
+                <div class="project-card-back">
+                  <h3>Forgery Detection</h3>
+                  <p>Advanced digital forensics AI pipeline fusing a custom 6-channel U-Net with traditional CV. Backed by an accepted IEEE paper.</p>
+                  <a href="https://github.com/Emmy-Elsawy/Image-Forgery-Localization.git" class="card-back-btn" target="_blank">View on GitHub <i class="fa-solid fa-arrow-right"></i></a>
+                </div>
+              </div>
+            </div>
+
+            <div class="project-card">
+              <div class="project-card-inner">
+                <div class="project-card-front">
+                  <div class="project-image"><img src="img/Baseera.png" alt="Baseera" /></div>
+                  <div class="project-info">
+                    <p class="project-category">Data Science & ML</p>
+                    <strong class="project-title">Baseera | Public Safety</strong>
+                  </div>
+                </div>
+                <div class="project-card-back">
+                  <h3>Baseera</h3>
+                  <p>Innovative forensic AI analyzing drug-related risks to reduce fatalities through proactive awareness and digital advocacy.</p>
+                  <a href="https://github.com/abdulr2005/-Baseera-A-Vision-to-Save-Lives.git" class="card-back-btn" target="_blank">View on GitHub <i class="fa-solid fa-arrow-right"></i></a>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+      </div>
     </div>
 
     <div class="slider-controls">
-        <button class="nav-btn prev" onclick="moveSlide(-1)"><i class="fas fa-chevron-left"></i></button>
-        <div class="page-dots" id="pageDots">
-            <span class="dot active"></span>
-            <span class="dot"></span>
-            <span class="dot"></span>
-            <span class="dot"></span>
-        </div>
-        <button class="nav-btn next" onclick="moveSlide(1)"><i class="fas fa-chevron-right"></i></button>
+      <button class="nav-btn" onclick="moveSlide(-1)" aria-label="Previous">
+        <i class="fa-solid fa-chevron-left"></i>
+      </button>
+      <div class="page-dots" id="pageDots">
+        <span class="dot active"></span>
+        <span class="dot"></span>
+        <span class="dot"></span>
+        <span class="dot"></span>
+      </div>
+      <button class="nav-btn" onclick="moveSlide(1)" aria-label="Next">
+        <i class="fa-solid fa-chevron-right"></i>
+      </button>
     </div>
-</section>
+  </section>
 
-    <section class="cards contact" id="contact" data-aos="fade-up">
-        <h2 class="title">Let's work together</h2>
-        <div class="content">
-            <div class="card" data-aos="flip-up" data-aos-delay="100">
-                <div class="icon"><i class="fas fa-phone"></i></div>
-                <div class="info">
-                    <h3>Phone</h3>
-                    <p>+201147809899</p>
-                </div>
-            </div>
-            <div class="card" data-aos="flip-up" data-aos-delay="300">
-                <div class="icon"><i class="fas fa-envelope"></i></div>
-                <div class="info">
-                    <h3>Email</h3>
-                    <p>abdulessai@gmail.com</p>
-                </div>
-            </div>
+  <!-- ═══════════════════════════════ CONTACT ═══════════════════════════════ -->
+  <section class="contact" id="contact" data-aos="fade-up">
+    <div class="contact-inner">
+      <div class="contact-text">
+        <div class="section-eyebrow">
+          <span class="ey-line"></span>
+          <span class="ey-txt">Get in touch</span>
         </div>
-    </section>
+        <h2 class="section-title">Let's work<br /><em>together</em></h2>
+        <p class="contact-sub">Open to freelance, collaborations & full-time opportunities.</p>
+      </div>
+      <div class="contact-cards">
+        <a href="tel:+201147809899" class="contact-card">
+          <i class="fa-solid fa-phone contact-icon"></i>
+          <div>
+            <span class="contact-lbl">Phone</span>
+            <span class="contact-val">+201147809899</span>
+          </div>
+        </a>
+        <a href="mailto:abdulessawi@gmail.com" class="contact-card">
+          <i class="fa-regular fa-envelope contact-icon"></i>
+          <div>
+            <span class="contact-lbl">Email</span>
+            <span class="contact-val">abdulessawi@gmail.com</span>
+          </div>
+        </a>
+      </div>
+    </div>
+  </section>
 
-    <footer class="footer">
-        <p class="footer-title">Copyrights @ <span>Abdulrahman El_essawi</span></p>
-        <div class="social-icon">
-                <a href="https://github.com/abdulr2005"><i class="fa-brands fa-github"></i></a>
-                <a href="https://www.linkedin.com/in/abdulrahmn-essawi-785543358/"><i class="fa-brands fa-linkedin"></i></a>
-                <a href="mailto:abdulessawi@gmail.com"><i class="fa-regular fa-at"></i></a>
-                <a href="https://wa.me/2001147809899"><i class="fa-brands fa-whatsapp"></i></a>
-            </div>
-    </footer>
+  <!-- ═══════════════════════════════ FOOTER ═══════════════════════════════ -->
+  <footer class="footer">
+    <p class="footer-copy">© 2025 <span>Abdulrahman El-Essawi</span> — All rights reserved.</p>
+    <div class="footer-social">
+      <a href="https://github.com/abdulr2005" target="_blank" aria-label="GitHub"><i class="fa-brands fa-github"></i></a>
+      <a href="https://www.linkedin.com/in/abdulrahmn-essawi-785543358/" target="_blank" aria-label="LinkedIn"><i class="fa-brands fa-linkedin"></i></a>
+      <a href="mailto:abdulessawi@gmail.com" aria-label="Email"><i class="fa-regular fa-envelope"></i></a>
+      <a href="https://wa.me/2001147809899" target="_blank" aria-label="WhatsApp"><i class="fa-brands fa-whatsapp"></i></a>
+    </div>
+  </footer>
 
-    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-    <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
-    <script src="script.js"></script>
+  <!-- Scripts -->
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+  <script src="script.js"></script>
 </body>
 </html>

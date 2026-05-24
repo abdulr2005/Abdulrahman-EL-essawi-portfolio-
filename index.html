@@ -67,7 +67,7 @@
 
       <div class="hero-actions" data-aos="fade-up" data-aos-duration="800" data-aos-delay="400">
         <a href="#projects" class="btn-primary">View my work</a>
-        <a href="#" class="btn-ghost">Download CV <i class="fa-solid fa-arrow-right"></i></a>
+        <button class="btn-ghost" id="cvToggleBtn" onclick="toggleCV()">My CV <i class="fa-solid fa-chevron-down" id="cvChevron"></i></button>
       </div>
 
       <div class="hero-social" data-aos="fade-up" data-aos-duration="800" data-aos-delay="500">
@@ -114,6 +114,166 @@
     </div>
   </section>
 
+  <!-- ═══════════════════════════════ CV DRAWER ═══════════════════════════════ -->
+  <div class="cv-drawer" id="cvDrawer" aria-hidden="true">
+    <div class="cv-drawer-inner">
+
+      <!-- CV Header -->
+      <div class="cv-header">
+        <div>
+          <div class="section-eyebrow"><span class="ey-line"></span><span class="ey-txt">Curriculum Vitae</span></div>
+          <h2 class="cv-name">Abdulrahman Mohamed Elissawi</h2>
+          <p class="cv-role">Data Scientist & Power BI Specialist · Machine Learning Engineer</p>
+        </div>
+        <div class="cv-contacts">
+          <span><i class="fa-solid fa-location-dot"></i> Cairo, Egypt</span>
+          <span><i class="fa-solid fa-phone"></i> +20 1147809899</span>
+          <span><i class="fa-regular fa-envelope"></i> elessawi.abdulrahman@gmail.com</span>
+          <span><i class="fa-brands fa-github"></i> github.com/abdulr2005</span>
+          <span><i class="fa-brands fa-linkedin"></i> linkedin.com/in/abdulrahmn-essawi</span>
+        </div>
+      </div>
+
+      <!-- Professional Summary -->
+      <div class="cv-block cv-block--full">
+        <h3 class="cv-block-title"><i class="fa-solid fa-user"></i> Professional Summary</h3>
+        <p class="cv-text">Data Scientist & Power BI Specialist | Machine Learning Engineer passionate about transforming massive, complex datasets into strategic insights. Experienced handling datasets exceeding 100,000 records, merging the analytical power of Python with the visual excellence of Power BI. Specialized in resolving critical ML challenges including Class Imbalance and Data Leakage to ensure reliable, production-grade AI models. Seeking an internship to turn complex data into intelligent decisions.</p>
+      </div>
+
+      <div class="cv-columns">
+
+        <!-- LEFT -->
+        <div class="cv-col">
+
+          <div class="cv-block">
+            <h3 class="cv-block-title"><i class="fa-solid fa-graduation-cap"></i> Education</h3>
+            <div class="cv-entry">
+              <span class="cv-entry-year">Sep 2023 – Jun 2027</span>
+              <strong class="cv-entry-title">B.Sc. in Artificial Intelligence</strong>
+              <span class="cv-entry-sub">Misr University for Science and Technology (MUST) — Giza, Egypt</span>
+              <span class="cv-entry-detail">Coursework: Machine Learning, NLP, Computer Vision, Data Structures, Statistics</span>
+            </div>
+          </div>
+
+          <div class="cv-block">
+            <h3 class="cv-block-title"><i class="fa-solid fa-diagram-project"></i> Technical Projects</h3>
+
+            <div class="cv-entry">
+              <span class="cv-entry-year">Apr 2026 – Present</span>
+              <strong class="cv-entry-title">Hybrid AI-Based Image Forgery Localization</strong>
+              <span class="cv-entry-detail">Research paper accepted — hybrid CV pipeline combining CNN + traditional methods for pixel-level forgery localization.</span>
+              <div class="cv-tags" style="margin-top:6px"><span>Computer Vision</span><span>Deep Learning</span><span>TensorFlow</span></div>
+            </div>
+
+            <div class="cv-entry">
+              <span class="cv-entry-year">Apr 2026 – Present</span>
+              <strong class="cv-entry-title">Smart Cave Mining System 🏆 1st Place</strong>
+              <span class="cv-entry-detail">1st Place — AI52 Competition at MUST. IoT + AI system for real-time hazard detection in underground mining environments.</span>
+              <div class="cv-tags" style="margin-top:6px"><span>Python</span><span>IoT</span><span>Hardware</span><span>AI</span></div>
+            </div>
+
+            <div class="cv-entry">
+              <strong class="cv-entry-title">ViralPulse FB: AI-Powered Analytics</strong>
+              <span class="cv-entry-detail">Predictive system with 92.4% accuracy to classify post virality. Interactive dashboard using Chart.js and JavaScript.</span>
+              <div class="cv-tags" style="margin-top:6px"><span>XGBoost</span><span>Random Forest</span><span>Chart.js</span></div>
+            </div>
+
+            <div class="cv-entry">
+              <strong class="cv-entry-title">Customer Churn Prediction (1M Records)</strong>
+              <span class="cv-entry-detail">End-to-end XGBoost pipeline with PCA and Forward Fill, achieving 48% Recall on severely imbalanced data.</span>
+              <div class="cv-tags" style="margin-top:6px"><span>XGBoost</span><span>PCA</span><span>Data Processing</span></div>
+            </div>
+
+            <div class="cv-entry">
+              <span class="cv-entry-year">Mar 2026 – May 2026</span>
+              <strong class="cv-entry-title">Comprehensive Pharmacy Management System</strong>
+              <span class="cv-entry-detail">Full-scale software solution with UML diagrams, relational databases for inventory management, and QR code payment modules.</span>
+              <div class="cv-tags" style="margin-top:6px"><span>Software Engineering</span><span>UML</span><span>Database</span></div>
+            </div>
+
+          </div>
+
+        </div>
+
+        <!-- RIGHT -->
+        <div class="cv-col">
+
+          <div class="cv-block">
+            <h3 class="cv-block-title"><i class="fa-solid fa-code"></i> Technical Skills</h3>
+            <div class="cv-skills">
+              <div class="cv-skill-group">
+                <span class="cv-skill-label">Languages</span>
+                <div class="cv-tags"><span>Python</span><span>SQL</span><span>C++</span><span>Java</span></div>
+              </div>
+              <div class="cv-skill-group">
+                <span class="cv-skill-label">ML / AI</span>
+                <div class="cv-tags"><span>TensorFlow</span><span>PyTorch</span><span>Scikit-learn</span><span>XGBoost</span></div>
+              </div>
+              <div class="cv-skill-group">
+                <span class="cv-skill-label">Data</span>
+                <div class="cv-tags"><span>Pandas</span><span>NumPy</span><span>PCA</span><span>Clustering</span><span>Regression</span></div>
+              </div>
+              <div class="cv-skill-group">
+                <span class="cv-skill-label">Visualization</span>
+                <div class="cv-tags"><span>Power BI</span><span>Tableau</span><span>Excel</span><span>Streamlit</span></div>
+              </div>
+              <div class="cv-skill-group">
+                <span class="cv-skill-label">Tools</span>
+                <div class="cv-tags"><span>Git</span><span>Jupyter</span><span>VS Code</span><span>Chart.js</span></div>
+              </div>
+            </div>
+          </div>
+
+          <div class="cv-block">
+            <h3 class="cv-block-title"><i class="fa-solid fa-trophy"></i> Awards & Achievements</h3>
+            <ul class="cv-list">
+              <li><strong>1st Place</strong> — AI352 Course Project Competition, MUST College of Information Technology (Smart Cave Mining System)</li>
+              <li>Research paper <strong>accepted</strong> — Hybrid AI pipeline for image forgery localization</li>
+              <li>92.4% accuracy on Facebook post virality prediction</li>
+              <li>Handled datasets exceeding <strong>1,000,000 records</strong> with production-grade pipelines</li>
+            </ul>
+          </div>
+
+          <div class="cv-block">
+            <h3 class="cv-block-title"><i class="fa-solid fa-certificate"></i> Certifications</h3>
+            <div class="cv-entry">
+              <span class="cv-entry-year">Feb 2026</span>
+              <strong class="cv-entry-title">Software Engineer</strong>
+              <span class="cv-entry-sub">HackerRank</span>
+            </div>
+            <div class="cv-entry">
+              <span class="cv-entry-year">Mar 2025</span>
+              <strong class="cv-entry-title">MCSA & Cloud Diploma</strong>
+              <span class="cv-entry-sub">Raya Academy</span>
+            </div>
+            <div class="cv-entry">
+              <span class="cv-entry-year">Dec 2024</span>
+              <strong class="cv-entry-title">CCNA / CCNP</strong>
+              <span class="cv-entry-sub">Raya Academy</span>
+            </div>
+            <div class="cv-entry">
+              <span class="cv-entry-year">Sep 2024</span>
+              <strong class="cv-entry-title">Ethical Hacker</strong>
+              <span class="cv-entry-sub">Cisco</span>
+            </div>
+            <div class="cv-entry">
+              <span class="cv-entry-year">Jun 2024</span>
+              <strong class="cv-entry-title">Python Essentials 1</strong>
+              <span class="cv-entry-sub">Cisco</span>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      <div class="cv-footer-bar">
+        <span>Abdulrahman Mohamed Elissawi · Cairo, Egypt · 2025</span>
+        <button class="cv-close-btn" onclick="toggleCV()">Close CV <i class="fa-solid fa-chevron-up"></i></button>
+      </div>
+
+    </div>
+  </div>
+
   <!-- ═══════════════════════════════ EXPERTISE ═══════════════════════════════ -->
   <section class="expertise" id="expertise">
     <div class="section-header" data-aos="fade-up">
@@ -159,7 +319,7 @@
     <div class="edu-timeline">
 
       <div class="edu-item" data-aos="fade-up" data-aos-delay="100">
-        <div class="edu-year">2021 – 2027</div>
+        <div class="edu-year">2023 – 2027</div>
         <div class="edu-spine">
           <div class="edu-dot"></div>
           <div class="edu-vline"></div>
@@ -202,7 +362,7 @@
 
     </div>
   </section>
-
+  
   <!-- ═══════════════════════════════ PROJECTS ═══════════════════════════════ -->
   <section class="projects" id="projects">
     <div class="section-header" data-aos="fade-up">

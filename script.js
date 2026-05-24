@@ -1,4 +1,22 @@
 // ═══════════════════════════════════════════════
+// 0. CV Drawer toggle
+// ═══════════════════════════════════════════════
+function toggleCV() {
+  const drawer  = document.getElementById('cvDrawer');
+  const chevron = document.getElementById('cvChevron');
+  const isOpen  = drawer.classList.toggle('open');
+
+  drawer.setAttribute('aria-hidden', String(!isOpen));
+  chevron.classList.toggle('rotated', isOpen);
+
+  if (isOpen) {
+    setTimeout(() => {
+      drawer.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }, 80);
+  }
+}
+
+// ═══════════════════════════════════════════════
 // 1. AOS — scroll animations
 // ═══════════════════════════════════════════════
 AOS.init({
